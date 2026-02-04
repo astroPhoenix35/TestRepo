@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Job_Two_Step_One
         uses: actions/checkout@v2
-      - name: Job_One_Step_Two
+      - name: Job_Two_Step_Two
         run: echo date       
   job3:
     name: Print First Date
