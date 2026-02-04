@@ -11,7 +11,7 @@ jobs:
       - name: Job_One_Step_One
         uses: actions/checkout@v2
       - name: Job_One_Step_Two
-        run: echo date
+        run: date +%D
   job2:
     name: Print First Date
     runs-on: ubuntu-latest
