@@ -11,7 +11,7 @@ jobs:
       - name: Job_One_Step_One
         uses: actions/checkout@v2
       - name: Job_One_Step_Two
-        run: date +%D
+        run: date
   job2:
     name: Print First Date
     runs-on: ubuntu-latest
@@ -19,7 +19,7 @@ jobs:
       - name: Job_Two_Step_One
         uses: actions/checkout@v2
       - name: Job_Two_Step_Two
-        run: echo date       
+        run: date       
   job3:
     name: Print First Date
     runs-on: ubuntu-latest
@@ -27,7 +27,7 @@ jobs:
       - name: Job_Three_Step_One
         uses: actions/checkout@v2
       - name: Job_Three_Step_Two
-        run: echo date          
+        run: date          
   job4:
     name: Print First Date
     runs-on: ubuntu-latest
@@ -39,4 +39,4 @@ jobs:
       - name: Job_Four_Step_One
         uses: actions/checkout@v2
       - name: Job_Four_Step_Two
-        run: echo date    
+        run: date    
