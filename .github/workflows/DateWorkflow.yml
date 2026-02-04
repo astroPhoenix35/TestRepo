@@ -1,0 +1,42 @@
+name: Date Workflow
+
+on:
+  - push
+
+jobs:
+  job1:
+    name: Print First Date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job_One_Step_One
+        uses: actions/checkout@v2
+      - name: Job_One_Step_Two
+        run: "echo date"
+  job2:
+    name: Print First Date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job_Two_Step_One
+        uses: actions/checkout@v2
+      - name: Job_One_Step_Two
+        run: "echo date"       
+  job3:
+    name: Print First Date
+    runs-on: ubuntu-latest
+    steps:
+      - name: Job_Three_Step_One
+        uses: actions/checkout@v2
+      - name: Job_Three_Step_Two
+        run: "echo date"          
+  job4:
+    name: Print First Date
+    runs-on: ubuntu-latest
+    needs: 
+      - job1
+      - job2
+      - job3
+    steps:
+      - name: Job_Four_Step_One
+        uses: actions/checkout@v2
+      - name: Job_Four_Step_Two
+        run: "echo date"         
