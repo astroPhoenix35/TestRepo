@@ -7,6 +7,9 @@ jobs:
     name: Build and Test
     environment: E1
     runs-on: windows-latest
+    steps:
+      - name: Env Test
+        run: ${{ secrets.ENVIRONMENT_NAME }}
       
   job1:
     name: First job
@@ -24,9 +27,3 @@ jobs:
         uses: actions/checkout@v2
       - name: Step two
         run: "Get-ChildItem Env: | Sort-Object Name"
-  job3:
-    name: Third Job
-    runs-on: windows-latest
-    steps:
-      - name: The ${{ secrets.ENVIRONMENT_NAME }} Test
-        run: ${{ secrets.ENVIRONMENT_NAME }}
