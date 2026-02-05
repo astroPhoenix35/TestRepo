@@ -3,6 +3,11 @@ name: first
 on: push
 
 jobs:
+  build:
+    name: Build and Test
+    environment: E1
+    runs-on: windows-latest
+      
   job1:
     name: First job
     runs-on: ubuntu-latest
