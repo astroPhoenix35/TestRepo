@@ -23,5 +23,5 @@ jobs:
     name: Third Job
     runs-on: windows-latest
     steps:
-      - name: The E1 Test
-        run: "echo ${{ env.ENVIRONMENT_NAME }}"
+      - name: The ${{ secrets.ENVIRONMENT_NAME }} Test
+        run: "echo ${{ secrets.ENVIRONMENT_NAME }}"
