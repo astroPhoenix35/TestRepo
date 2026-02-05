@@ -24,4 +24,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: The E1 Test
-        run: "echo ${{ vars.ENVIRONMENT_NAME }}"
+        run: "echo ${{ env.ENVIRONMENT_NAME }}"
