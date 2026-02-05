@@ -24,4 +24,4 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: The ${{ secrets.ENVIRONMENT_NAME }} Test
-        run: "echo ${{ secrets.ENVIRONMENT_NAME }}"
+        run: echo ${{ secrets.ENVIRONMENT_NAME }}
