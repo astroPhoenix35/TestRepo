@@ -29,6 +29,6 @@ jobs:
     runs-on: windows-latest
     steps: 
       - name: Step one
-        run: "echo Test $PRODUCTION.PROD_VAR"
+        run: "echo Test $env.PROD_VAR"
         env:
-          PROD_VAR: "echo ${{ PRODUCTION.PROD_VAR" }}"
+          PROD_VAR: echo ${{ env.PROD_VAR }}
