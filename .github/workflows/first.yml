@@ -9,7 +9,7 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Env Test
-        run: ${{ secrets.ENVIRONMENT_PASSWORD }}
+        run: ${ secrets.ENVIRONMENT_PASSWORD }
       
   job1:
     name: First job
