@@ -6,10 +6,14 @@ jobs:
   build:
     name: Build and Test
     environment: E1
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Env Test
-        run: $secrets.ENVIRONMENT_PASSWORD
+        uses: actions/checkout@v4
+      - name: Run a step for a secret
+        run: "My secret is: $secrets.ENVIRONMENT_PASSWORD" 
+        env:
+          ENVIRONMENT_PASSWORD: ${{ secrets.ENVIRONMENT_PASSWORD }}
       
   job1:
     name: First job
