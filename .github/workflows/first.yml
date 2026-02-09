@@ -18,7 +18,7 @@ jobs:
       - name: Step one
         uses: actions/checkout@v2
       - name: Step two
-        run: env | sort
+        run: ${{ vars.E2_VARIABLE }}
   job2:
     name: Second job
     runs-on: windows-latest
