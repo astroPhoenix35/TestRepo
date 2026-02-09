@@ -11,7 +11,7 @@ jobs:
       - name: Env Test
         uses: actions/checkout@v4
       - name: Run a step for a secret
-        run: "My secret is: $secrets.ENVIRONMENT_PASSWORD" 
+        run: echo "Test ${{ secrets.ENVIRONMENT_PASSWORD }}"
         env:
           ENVIRONMENT_PASSWORD: ${{ secrets.ENVIRONMENT_PASSWORD }}
       
