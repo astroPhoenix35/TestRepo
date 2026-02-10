@@ -12,3 +12,4 @@ jobs:
         uses: actions/checkout@v4
         with:
           path: Hardcoded Secret
+          new_secret: New Secret
