@@ -11,4 +11,4 @@ jobs:
       - name: Hardcoded variable test
         uses: actions/checkout@v4
         with:
-          hardcoded-secret: Hardcoded Secret
+          path: Hardcoded Secret
