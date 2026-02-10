@@ -9,4 +9,4 @@ jobs:
       - name: aaron's sample cron job
         run: echo "This step was run on Tuesday"
       - name: Each time
-        run: This is a step that will run every time
+        run: echo "This is a step that will run every time"
