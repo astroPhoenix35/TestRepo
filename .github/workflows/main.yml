@@ -1,6 +1,8 @@
 name: aaron's cron test jobs
 
-on: push
+on:
+  schedule:
+    - cron: "47 16 * * *"
 
 jobs:
   test-schedule:
