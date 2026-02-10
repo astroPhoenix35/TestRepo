@@ -2,8 +2,7 @@ name: aaron's cron test jobs
 
 on:
   schedule:
-    - cron: "25,30 16,17 * * *"
-    - cron: "10 11,12 * * *"
+    - cron: "35 16 * * *"
 
 jobs:
   test-schedule:
