@@ -8,27 +8,7 @@ jobs:
     environment: E1
     runs-on: ubuntu-latest
     steps:
-      - name: Env Test
+      - name: Hardcoded variable test
         uses: actions/checkout@v4
-      - name: Run a step for a secret
-        run: echo "Test ${{ secrets.ENVIRONMENT_PASSWORD }}"
-        env:
-          ENVIRONMENT_PASSWORD: ${{ secrets.ENVIRONMENT_PASSWORD }}
-      
-  job1:
-    name: First job
-    runs-on: ubuntu-latest
-    steps: 
-      - name: Step one
-        uses: actions/checkout@v2
-      - name: Step two
-        run: ${{ vars.E2_VARIABLE }}
-        
-  job2:
-    name: Second job
-    runs-on: windows-latest
-    steps: 
-      - name: Step one
-        run: "echo Test ${{ vars.PROD_VAR }}"
-        env: 
-          PROD_VAR: echo ${{ vars.PROD_VAR }}
+        with:
+          hardcoded-secret: Hardcoded Secret
