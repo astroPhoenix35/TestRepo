@@ -2,13 +2,11 @@ name: aaron's cron test jobs
 
 on:
   schedule:
-    - cron: "0,5,10,15,20,25,30,35,40,45,50,55 * * * *"
+    - cron: "15 20 * * *"
 
 jobs:
   test-schedule:
     runs-on: ubuntu-latest
     steps:
       - name: aaron's sample cron job
-        run: echo "This step was run on Tuesday"
-      - name: Each time
-        run: echo "This is a step that will run every time"
+        run: echo "This step was run on Thursday"
